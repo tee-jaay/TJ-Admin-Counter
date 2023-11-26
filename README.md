@@ -1,7 +1,7 @@
 # Tj Admin Counter
 
 ![WordPress Version](https://img.shields.io/wordpress/plugin/wp-version/tj-admin-counter)
-![License](https://img.shields.io/github/license/your-username/tj-admin-counter)
+![License](https://img.shields.io/github/license/tee-jaay/tj-admin-counter)
 
 ## Description
 
@@ -25,6 +25,7 @@ Once activated, you will see a counter in the admin bar indicating the number of
 
 ![Screenshot 1](screenshot-1.png)
 *Number Administrator account 1 in green color.*
+<br/>
 ![Screenshot 2](screenshot-2.png)
 *Number Administrator account more than 1 in red color.*
 
@@ -44,10 +45,9 @@ Contributions are welcome! Feel free to open issues or submit pull requests.
 
 ## Credits
 
-- [Your Name](https://github.com/tee-jaay) - Author
+- Tamjid (https://github.com/tee-jaay) - Author
 
 ## Changelog
 
 ### 0.0.1
 - Initial release
-
