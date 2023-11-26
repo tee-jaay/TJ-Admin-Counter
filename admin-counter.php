@@ -15,7 +15,7 @@
 function tj_admin_counter_enqueue_styles() {
     wp_enqueue_style('admin-counter-styles', plugin_dir_url(__FILE__) . 'main.css');
 }
-
+// Main function
 function tj_admin_counter_count_admins_in_admin_bar() {
     global $wp_admin_bar;
     $admins_count = count(get_users(array('role' => 'administrator')));
