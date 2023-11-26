@@ -5,3 +5,7 @@
 .admin-counter-red {
     color: red;
 }
+
+.admin-counter-green:hover, .admin-counter-red:hover {
+    color: white;
+}

@@ -5,7 +5,7 @@
 
 ## Description
 
-Tj Admin Counter is a WordPress plugin that displays the current number of administrators in the WordPress admin bar. It highlights the count in green if there is only one admin and in red if there are more.
+Tj Admin Counter is a WordPress plugin that displays the current number of administrators in the WordPress admin bar. It highlights the count in green if there is only one admin and in red if there are more. Additionally, the plugin sends a daily email notification to the first administrator if there are multiple administrators.
 
 ## Installation
 
@@ -23,10 +23,10 @@ Once activated, you will see a counter in the admin bar indicating the number of
 
 ## Screenshots
 
-![Screenshot 1](screenshot-1.png)
+![Screenshot 1](images/screenshot-1.png)
 *Number Administrator account 1 in green color.*
 <br/>
-![Screenshot 2](screenshot-2.png)
+![Screenshot 2](images/screenshot-2.png)
 *Number Administrator account more than 1 in red color.*
 
 ## Frequently Asked Questions
@@ -51,3 +51,10 @@ Contributions are welcome! Feel free to open issues or submit pull requests.
 
 ### 0.0.1
 - Initial release
+
+### 0.0.2
+- Added email notification functionality for the first admin.
+  - An email is sent when there is more than one administrator.
+  - Maximum one email per day.
+  - Counter link to WP Users page's administrator tab.
+  - Hover color for the link.
