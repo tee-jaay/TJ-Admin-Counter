@@ -2,7 +2,7 @@
 /**
  * Plugin Name: Tj Admin Counter
  * Description: Shows the current number of admins counter in the top bar.
- * Version: 0.0.2
+ * Version: 0.0.3
  * Author: Tamjid
  * Author URI: https://teejaay.me
  * License: MIT License
@@ -22,30 +22,32 @@ function tj_admin_counter_enqueue_styles() {
 }
 // Main function
 function tj_admin_counter_count_admins_in_admin_bar() {
-    global $wp_admin_bar;
-    $admins_count = count(get_users(array('role' => 'administrator')));
+    if (current_user_can('manage_options')) {
+        global $wp_admin_bar;
+        $admins_count = count(get_users(array('role' => 'administrator')));
 
-    // Define a CSS class based on the number of admins
-    $css_class = ($admins_count === 1) ? 'admin-counter-green' : 'admin-counter-red';
+        // Define a CSS class based on the number of admins
+        $css_class = ($admins_count === 1) ? 'admin-counter-green' : 'admin-counter-red';
+        
+        // Enqueue styles
+        tj_admin_counter_enqueue_styles();
     
-    // Enqueue styles
-    tj_admin_counter_enqueue_styles();
+        // Construct the link to the Users page with the Administrator role filter
+        $users_page_url = admin_url('users.php') . '?role=administrator';
 
-    // Construct the link to the Users page with the Administrator role filter
-    $users_page_url = admin_url('users.php') . '?role=administrator';
+        $title = sprintf('<a href="%s" class="%s">', esc_url($users_page_url), $css_class) . __('Admins: ', 'tj-admin-counter') . $admins_count . '</a>';
 
-    $title = sprintf('<a href="%s" class="%s">', esc_url($users_page_url), $css_class) . __('Admins: ', 'tj-admin-counter') . $admins_count . '</a>';
+        $wp_admin_bar->add_node(
+            array(
+                'id'    => 'admin-count',
+                'title' => $title,
+                'parent' => 'top-secondary',
+            )
+        );
 
-    $wp_admin_bar->add_node(
-        array(
-            'id'    => 'admin-count',
-            'title' => $title,
-            'parent' => 'top-secondary',
-        )
-    );
-
-    // Send email if conditions are met
-    tj_admin_counter_send_email();
+        // Send email if conditions are met
+        tj_admin_counter_send_email();
+    }
 }
 
 add_action('admin_bar_menu', 'tj_admin_counter_count_admins_in_admin_bar', 999);

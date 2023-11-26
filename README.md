@@ -58,3 +58,6 @@ Contributions are welcome! Feel free to open issues or submit pull requests.
   - Maximum one email per day.
   - Counter link to WP Users page's administrator tab.
   - Hover color for the link.
+
+### 0.0.3
+- Remove visiblity from non-admins.
