@@ -61,3 +61,6 @@ Contributions are welcome! Feel free to open issues or submit pull requests.
 
 ### 0.0.3
 - Remove visiblity from non-admins.
+
+### 0.0.4
+- Changed author URI.

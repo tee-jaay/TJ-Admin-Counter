@@ -2,11 +2,11 @@
 /**
  * Plugin Name: Tj Admin Counter
  * Description: Shows the current number of admins counter in the top bar.
- * Version: 0.0.3
+ * Version: 0.0.4
  * Author: Tamjid
- * Author URI: https://teejaay.me
+ * Author URI: https://devapps.uk
  * License: MIT License
- * License URI: https://teejaay.me/wp-content/plugins/tj-admin-counter/license.txt
+ * License URI: https://devapps.uk/wp-content/plugins/tj-admin-counter/license.txt
  * Requires at least: 5.0
  * Tested up to: 6.4.1
  * Requires PHP: 7.4.33
